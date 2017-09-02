@@ -562,7 +562,7 @@ open class PulleyViewController: UIViewController {
      - parameter animated: Whether or not to animate the change. (Default: true)
      - parameter completion: A block object to be executed when the animation sequence ends. The Bool indicates whether or not the animations actually finished before the completion handler was called. (Default: nil)
      */
-    public func setDrawerPosition(position: PulleyPosition, animated: Bool, completion: PulleyAnimationCompletionBlock? = nil) {
+    open func setDrawerPosition(position: PulleyPosition, animated: Bool, completion: PulleyAnimationCompletionBlock? = nil) {
         guard supportedPositions.contains(position) else {
             
             print("PulleyViewController: You can't set the drawer position to something not supported by the current view controller contained in the drawer. If you haven't already, you may need to implement the PulleyDrawerViewControllerDelegate.")
@@ -637,7 +637,7 @@ open class PulleyViewController: UIViewController {
      
      - parameter position: The position to set the drawer to.
      */
-    public func setDrawerPosition(position: PulleyPosition)
+    open func setDrawerPosition(position: PulleyPosition)
     {
         setDrawerPosition(position: position, animated: true)
     }
@@ -738,7 +738,7 @@ open class PulleyViewController: UIViewController {
     
     // MARK: Actions
     
-    func dimmingViewTapRecognizerAction(gestureRecognizer: UITapGestureRecognizer)
+    open func dimmingViewTapRecognizerAction(gestureRecognizer: UITapGestureRecognizer)
     {
         if gestureRecognizer == dimmingViewTapRecognizer
         {
